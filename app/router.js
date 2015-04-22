@@ -6,4 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.resource('series', function(){
+    this.resource('serie', { path:'/:serie_id' });
+  });
 });

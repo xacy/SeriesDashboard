@@ -1,0 +1,16 @@
+<ul class="nav nav-sidebar text-center">
+  <!-- <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li> -->
+  <li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></li>
+  {{#each serie in model}}
+    <li>
+      <!-- <a href="#">
+        <img width="50" height="50" {{bind-attr src=serie.logo}}>
+        {{serie.name}}
+      </a> -->
+       {{#link-to "serie" serie}}
+       <img width="50" height="50" {{bind-attr src=serie.logo}}>
+        {{serie.name}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
