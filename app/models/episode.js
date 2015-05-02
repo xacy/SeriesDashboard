@@ -8,11 +8,12 @@ var Episode= DS.Model.extend({
   episodeNumber : DS.attr(),
   viewed        : DS.attr(),
   aired         : DS.attr(),
-  series        : DS.belongsTo('serie')
+  serie        : DS.belongsTo('serie')
 });
 Episode.reopenClass({
   FIXTURES:[
     {
+      id            : 1,
       tvdb_id       : '5160956',
       imdb_id       : '',
       name          : 'American Skyper',
@@ -21,7 +22,7 @@ Episode.reopenClass({
       episodeNumber : '24',
       viewed        : false,
       aired         : '2015-05-20',
-      series        : [1]
+      serie        : 1
     }
   ]
 });

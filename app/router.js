@@ -9,4 +9,7 @@ export default Router.map(function() {
   this.resource('series', function(){
     this.resource('serie', { path:'/:serie_id' });
   });
+  this.resource('search', {path: '/search'}, function(){
+    this.route('results', {path: ':keyword'});
+  });
 });

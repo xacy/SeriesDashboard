@@ -23,7 +23,13 @@
 <div class="col-md-1">
   <!-- {{render "sidebar"}} -->
   <ul class="nav nav-sidebar text-center">
-    <li><a href="#"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></li>
+    <li>
+      {{#link-to "search"}}
+        <a href="#">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </a>
+      {{/link-to}}
+    </li>
     {{#each serie in model}}
       <li>
          {{#link-to "serie" serie href=false}}

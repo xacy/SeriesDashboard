@@ -9,7 +9,7 @@ var Serie= DS.Model.extend({
   actors        : DS.attr(),
   airDay       : DS.attr(),
   network       : DS.attr(),
-  episodes      : DS.hasMany('episode')
+  episode      : DS.hasMany('episode',{ async: true })
 });
 Serie.reopenClass({
   FIXTURES:[
@@ -24,7 +24,7 @@ Serie.reopenClass({
       actors:'|Julie Bowen|Ty Burrell|Jesse Tyler Ferguson|Eric Stonestreet|Sofia Vergara|Ed O\'Neill|Rico Rodriguez|Nolan Gould|Sarah Hyland|Ariel Winter|Aubrey Anderson-Emmons|',
       airDay:'Wednesday',
       network:'ABC',
-      episodes:[1]
+      episode:[1]
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ Serie.reopenClass({
       actors:'|Julie Bowen|Ty Burrell|Jesse Tyler Ferguson|Eric Stonestreet|Sofia Vergara|Ed O\'Neill|Rico Rodriguez|Nolan Gould|Sarah Hyland|Ariel Winter|Aubrey Anderson-Emmons|',
       airDay:'Wednesday',
       network:'ABC',
-      episodes:[1]
+      episode:[1]
     }
   ]
 });
